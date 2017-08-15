@@ -8,7 +8,6 @@ var petal_wide;
 var petal_long;
 var petals;
 var petal_separation;
-var petal_y;
 
 function setup() {
     createCanvas(800, 640);
@@ -19,30 +18,29 @@ function setup() {
     color_petal = color(random(0,255), random(0,255), random(0,255));
 
     trunk_height = random(20, height/2);
-    trunk_wide = random(2, radius/2)
-    // petals = random(3, 10);
-    petals = 6;
+    trunk_wide = random(10, radius/2)
+    petals = ceil(random(5, 10));
+    // petals = 10;
     petal_separation = 80;
-    petal_y = 10;
-    // petal_long = random(10, trunk_height - 4);
-    petal_long = 100;
-    petal_wide = 50;
-    // petal_wide = random(5, 20);
+    petal_long = random(trunk_height/6, trunk_height*0.8);
+    // petal_long = 100;
+    // petal_wide = 50;
+    petal_wide = random(trunk_wide*1.4, trunk_wide*2);
 
-    // noStroke();
+    noStroke();
+    translate(width/2, height/2)
 
     fill(color_trunk);
-    rect((width/2)-(trunk_wide/2), (height/2), trunk_wide, trunk_height);
+    rect(0-(trunk_wide/2), 0, trunk_wide, trunk_height);
 
-    fill(color_center);
-    ellipse(width/2, height/2, radius, radius);
-
-    translate(width/2, height/2)
     fill(color_petal);
     for (var i = 0; i < petals; i++) {
         rect(0, 0 + radius/4, petal_wide, petal_long);
-        rotate(1);
+        rotate((2*PI)/petals);
     }
+
+    fill(color_center);
+    ellipse(0, 0, radius, radius);
 }
 
 function draw() {
