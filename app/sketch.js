@@ -25,25 +25,18 @@ function setup() {
     createCanvas(800, 640);
     translate(width/2, height/2);
 
-    coloring();
-    createPlanet(bck_color, hill_color);
-    createDaisy(color_center, color_petal, color_trunk);
+    seedTheWorld();
 
 }
 
-function draw() {
-
-}
-
-function createPlanet(bck_color, hill_color) {
+function createPlanet() {
     noStroke();
     background(bck_color);
     fill(hill_color);
     ellipse(0, height/2-50, width*1.5, height);
 }
 
-
-function createDaisy(color_center, color_petal, color_trunk) {
+function createDaisy() {
     // DIMENSIONS
     radius = random(20, 80);
     trunk_height = random(radius*2, height/2);
@@ -67,4 +60,19 @@ function createDaisy(color_center, color_petal, color_trunk) {
     stroke(2);
     fill(color_center);
     ellipse(0, 0, radius, radius);
+}
+
+function seedTheWorld(){
+    coloring();
+    createPlanet(bck_color, hill_color);
+    createDaisy(color_center, color_petal, color_trunk);
+}
+
+function mouseClicked() {
+    translate(width/2, height/2);
+    seedTheWorld();
+}
+
+function draw() {
+
 }
