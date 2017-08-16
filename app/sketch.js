@@ -19,12 +19,9 @@ function setup() {
 
     trunk_height = random(20, height/2);
     trunk_wide = random(10, radius/2)
-    petals = ceil(random(5, 10));
-    // petals = 10;
+    petals = ceil(random(7, 15));
     petal_separation = 80;
-    petal_long = random(trunk_height/6, trunk_height*0.8);
-    // petal_long = 100;
-    // petal_wide = 50;
+    petal_long = random(trunk_height*0.4, trunk_height*0.8 - radius);
     petal_wide = random(trunk_wide*1.4, trunk_wide*2);
 
     noStroke();
