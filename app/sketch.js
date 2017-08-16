@@ -39,7 +39,7 @@ function createPlanet() {
 function createDaisy() {
     // DIMENSIONS
     radius = random(20, 80);
-    trunk_height = random(radius*2, height/2);
+    trunk_height = random(radius*2, (height/2)*0.8);
     trunk_wide = random(10, radius/2)
     petals = ceil(random(7, 15));
     petal_long = random(trunk_height*0.4, trunk_height*0.8 - radius);
