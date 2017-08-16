@@ -34,6 +34,12 @@ nav ul {
 nav li {
     margin-bottom: 1.2rem;
 }
+
+nav li a {
+    text-decoration: none;
+    color: #5153f5;
+}
+
 canvas {
     border: 5px dashed white;
 }
