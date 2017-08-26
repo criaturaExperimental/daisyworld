@@ -1,5 +1,8 @@
-# Procedural Hackaton 2017
-## DaisyWorld
+# DaisyWorld - Procedural Hackaton 2017 
+
+[See the project in action](https://criaturaexperimental.github.io/daisyworld/)
+
+## Inspiration
 
 Based on *James Lovelock* and *Andrew Watson* paper published in 1983, [daisyworld](https://en.wikipedia.org/wiki/Daisyworld "Wikipedia's article daisyworld"). This little procedural beauty offers you the inmersive experience of peeking into a brand new world with an exquisite and unique daisy for your heart content.
 
